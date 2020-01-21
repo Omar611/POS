@@ -1,0 +1,139 @@
+.navbar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+	min-height: 15vh;
+	background-color: $backColor;
+}
+.top-bar{
+	background-color: $headerColor;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+.logo {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	letter-spacing: 0.2em;
+	margin-top: 0.2em;
+	width: 100%;
+	text-align: center;
+	a {
+		color: $textMain;
+		text-decoration: none;
+		span {
+			font-size: 0.4em;
+			letter-spacing: normal;
+			font-family: sans-serif;
+		}
+	}
+}
+
+.welcom-msg {
+	width: 100%;
+	color: $textMain;
+    text-align: center;
+    margin-bottom: .5em;
+	a {
+		text-decoration: none;
+		color: $btn-mainColor;
+	}
+}
+
+.nav-buttons {
+	list-style: none;
+	width: 100%;
+	background-color: $backColor;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	transition: transform 750ms ease-out;
+	li {
+		margin: 2em 2.5em;
+	}
+}
+
+/* Start Burger */
+
+.burger {
+	position: absolute;
+	top: 13%;
+	right: 6%;
+	opacity: 0;
+	pointer-events: none;
+	display: none;
+	.line {
+		width: 30px;
+		height: 4px;
+		background-color: $btn-mainColor;
+		margin: 3px;
+		transition: transform 750ms ease-out;
+	}
+}
+
+.active {
+	:first-child {
+		transform: rotate(45deg) translateX(10px);
+	}
+	:nth-child(2) {
+		opacity: 0;
+	}
+	:last-child {
+		transform: rotate(-45deg) translateX(10px);
+	}
+}
+
+@media screen and (max-width: 768px){
+	.burger {
+		opacity: 100%;
+		pointer-events: all;
+		display: block;
+		cursor: pointer;
+		z-index: 9;
+	}
+	.nav-buttons {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		background-color: rgb(12, 12, 12);
+		li {
+			width: 90%;
+			padding: 0.5em;
+			background-color: $backColor;
+			margin-left: 10%;
+			.btn-main {
+				text-decoration: none;
+				background: $btn-mainColor;
+				border-radius: 0;
+				color: $textMain;
+				font-weight: 900;
+				text-align: left;
+				width: 100%;
+				background-color: $backColor;
+				padding: 0;
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: $backColor;
+				};
+			}
+		}
+	}
+	.hide {
+		transform: translateX(100vw);
+	}
+	
+}
+
+/* End Burger */

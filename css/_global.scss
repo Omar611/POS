@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// outline: 1px solid red; //For Debuging
+}
+
+html,
+body {
+	height: 100%;
+	font-family: sans-serif;
+	overflow-x: hidden;
+}
+
+.container {
+	background: $backColor;
+	width: 100%;
+	min-height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	align-items: center;
+	margin-bottom: 3em;
+}
+
+.content-btns {
+	width: 80%;
+	margin: 4em 0 0 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	a {
+		margin: 0 1em;
+	}
+	@media screen and (max-width: 1000px) {
+		justify-content: center;
+	}
+}
+
+table {
+	margin-top: 3em;
+}

@@ -1,0 +1,91 @@
+
+.btn-main {
+	text-decoration: none;
+	color: $backColor;
+	background: $btn-mainColor;
+	padding: 0.5em;
+	border-radius: 1em;
+	transition: ease 600ms;
+	text-align: center;
+	&:hover,
+	&:focus,
+	&:active {
+		padding: 0.8em;
+		background-color: $btn-secColor;
+	}
+}
+
+.btn-sec {
+	text-decoration: none;
+	color: $backColor;
+	background: $btn-secColor;
+	padding: 0.5em;
+	border-radius: 1em;
+	transition: 500ms ease;
+	text-align: center;
+	&:hover,
+	&:focus,
+	&:active {
+		padding: 0.8em;
+		background-color: $btn-mainColor;
+	}
+}
+.btn-sumbit {
+	text-decoration: none;
+	color: $backColor;
+	background: $btn-secColor;
+	padding: 0.5em 2em;
+	border: 0;
+	border-radius: 1em;
+	transition: 500ms ease;
+	text-align: center;
+	// margin-top: 2em;
+	font-weight: bold;
+	// align-self: flex-end;
+	&:hover,
+	&:focus,
+	&:active {
+		padding: 0.7em 2.2em;
+		background-color: $btn-mainColor;
+		cursor: pointer;
+	}
+}
+
+.btn-delete {
+    text-decoration: none;
+	color: $backColor;
+	background: $warning;
+	padding: 0.5em 2em;
+	border: 0;
+	border-radius: 1em;
+	transition: 500ms ease;
+	margin-top: 2em;
+	font-weight: bold;
+	text-align: center;
+	&:hover,
+	&:focus,
+	&:active {
+		padding: 0.7em 2.2em;
+		cursor: pointer;
+	} 
+}
+
+.btn-cancel {
+	text-decoration: none;
+	color: $backColor;
+	background: $btn-secColor;
+    padding: 0.5em;
+    width: 10em;
+    text-align: center;
+    font-weight: bold;
+	border-radius: 1em;
+	transition: 500ms ease;
+	flex-basis: 18em;
+	margin: 2em;
+	&:hover,
+	&:focus,
+	&:active {
+		padding: 0.8em;
+		background-color: $btn-mainColor;
+	}
+}

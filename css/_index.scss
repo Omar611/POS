@@ -1,0 +1,56 @@
+.slogan {
+	color: $textMain;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 2em;
+}
+
+.home-btns {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 30em;
+	.home-btns-row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		a {
+			transition: background-color ease 500ms, padding ease 500ms, transform ease 1000ms, margin ease 1000ms;
+		}
+		.left-btn {
+			transform: translateX(-100%);
+			transform: translateY(-50%);
+			margin: 5em;
+		}
+		.right-btn {
+			transform: translateX(100%);
+			transform: translateY(-50%);
+			margin: 5em;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		margin: 4em;
+
+		.home-btns-row {
+			flex-direction: column;
+			margin: 0;
+			.left-btn {
+				margin: 1.5em;
+				transform: translateY(0);
+			}
+			.right-btn {
+				margin: 1.5em;
+				transform: translateY(0);
+			}
+			a {
+				margin: 1.5em;
+			}
+		}
+	}
+}

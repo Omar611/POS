@@ -1,0 +1,13 @@
+footer {
+    background-color: $headerColor;
+    color: $textMain;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 7vh;
+    position: relative;
+    bottom: 0;
+    margin-top: -3em;
+    width: 100%;
+}

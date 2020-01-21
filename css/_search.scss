@@ -1,0 +1,36 @@
+.search-bar {
+	margin-top: .5em;
+	th {
+		color: $btn-mainColor;
+		font-weight: bold;
+		text-align: left;
+		padding: 1em;
+	}
+	td {
+		color: $td-color;
+	}
+	.input-filed {
+		padding: 0.5em;
+		border-radius: 5px;
+		width: 18em;
+		&:focus {
+			border: 3px solid $btn-mainColor;
+		}
+	}
+
+	#resultsList {
+		background-color: #fff;
+		border-radius: 0 0 6px 6px;
+		max-height: 7em;
+		overflow: auto;
+		li {
+			list-style: none;
+			padding: 0.3em;
+			border-bottom: 0.5px solid gray;
+			a {
+				color: $btn-secColor;
+				text-decoration: none;
+			}
+		}
+	}
+}

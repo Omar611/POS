@@ -1,0 +1,42 @@
+.table-container {
+	overflow: auto;
+    background-color: $backColor;
+    max-width: 95%;
+}
+.info_table {
+	border-collapse: collapse;
+	text-align: left;
+	margin: 3em 0;
+	thead {
+		background-color: $btn-mainColor;
+		font-weight: bold;
+	}
+	tbody {
+		tr {
+			border-bottom: 1px solid $td-color;
+		}
+	}
+	th {
+		padding: 0.3em;
+	}
+	td {
+		padding: 0.4em 0.3em;
+		color: $td-color;
+	}
+	.btn-table {
+		text-decoration: none;
+		color: $btn-mainColor;
+		padding: 0.2em;
+		&:hover {
+			background-color: $btn-secColor;
+		}
+	}
+	.btn-table-sec {
+		text-decoration: none;
+		color: $btn-secColor;
+		padding: 0.2em;
+		&:hover {
+			background-color: $btn-mainColor;
+		}
+	}
+}

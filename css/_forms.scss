@@ -1,0 +1,112 @@
+.form-header {
+	color: $btn-secColor;
+	margin-top: 2em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 95%;
+}
+
+.form-table {
+	margin-bottom: 1em;
+	max-width: 95%;
+	th {
+		color: $btn-mainColor;
+		font-weight: bold;
+		text-align: left;
+		letter-spacing: 1.4px;
+		padding: 1em;
+	}
+	td {
+		color: $td-color;
+	}
+	.input-filed {
+		padding: 0.5em;
+		border-radius: 5px;
+		width: 18em;
+		&:focus {
+			border: 3px solid $btn-mainColor;
+		}
+		@media screen and (max-width: 600px) {
+			width: 9em;
+		}
+	}
+}
+
+.form-errors {
+	font-weight: bold;
+	text-align: center;
+	margin: 1em;
+	color: $warning;
+	letter-spacing: 2px;
+	list-style: none;
+	animation: DANCING-ERROR 300ms ease-in-out 2;
+}
+
+@keyframes DANCING-ERROR {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	75% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.popup {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(92, 92, 92, 0.774);
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.popup-msg {
+		height: 50%;
+		width: 50%;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		border-radius: 1em;
+		.popup-btns {
+			width: 80%;
+			margin: 4em 0 0 0;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			a {
+				text-decoration: none;
+				font-weight: 700;
+				color: #fff;
+				padding: 1em;
+				background-color: $btn-secColor;
+				border-radius: 1em;
+			}
+		}
+	}
+}
+.hidePopup {
+	display: none;
+    pointer-events: none;
+    z-index: -1;
+}
